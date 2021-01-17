@@ -1,3 +1,94 @@
 @import 'vars';
 @import 'fonts';
 @import 'global';
+@import 'reset';
+@import 'media';
+
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+
+    &+& {
+      margin-left: 50px;
+    }
+  }
+}
+
+.button {
+  border: 1px solid #60DAD0;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 19px 29px;
+  cursor: pointer;
+  color: #60DAD0;
+  @extend %Gilroy-700;
+  font-size: 18px;
+}
+
+.home {
+  padding: 107px 0 100px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    color: #60DAD0;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  &__content-title {
+    font-size: 60px;
+    @extend %ACaslonPro-700;
+    max-width: 510px;
+
+    span {
+      color: #60DAD0;
+    }
+  }
+  &__text{
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  &__box-benef{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  &__benef-logo{
+    background-color:#F0FFFE;
+    border-radius: 10px;
+    padding: 20px;
+    padding-right: 35px;
+
+      width: 105px;
+      height: 90px;
+   
+  }
+  &__benef{
+    display: flex;
+    align-items: center;
+    max-width: 230px;
+    margin-bottom: 30px;
+  }
+  &__benef-content{
+    margin-left: -20px;
+  }
+  &__button{
+    background-color: #B2ECE7;
+    border: none;
+    color: #fff;
+    margin-top: 10px;
+  }
+}

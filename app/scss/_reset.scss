@@ -22,8 +22,8 @@ h4,
 h5,
 h6,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -33,12 +33,14 @@ dd {
   margin: 0;
 }
 
-ul[class] {
+ul {
   list-style: none;
+  
   padding: 0px;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -52,4 +54,5 @@ button,
 textarea,
 select {
   font: inherit;
+  outline: transparent;
 }
