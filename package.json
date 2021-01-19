@@ -17,9 +17,11 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "rateyo": "^2.3.2"
   },
   "dependencies": {
-    "mozjpeg": "^7.0.0"
+    "mozjpeg": "^7.0.0",
+    "slick-carousel": "^1.8.1"
   }
 }

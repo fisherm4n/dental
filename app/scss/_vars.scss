@@ -14,3 +14,18 @@
   font-family: 'ACaslonPro-Bold';
   font-weight: 700;
 }
+%btn{
+    border: 1px solid #60DAD0;
+    border-radius: 10px;
+    padding: 19px 29px;
+    cursor: pointer;
+    background-color: #60DAD0;
+    @extend %Gilroy-700;
+    font-size: 18px;
+    color: #ffffff;
+}
+%content-title{
+  @extend %ACaslonPro-700;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
