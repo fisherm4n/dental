@@ -104,13 +104,13 @@
 
 .about {
   padding-bottom: 233px;
-
+  
   &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     background-color: #F0FFFE;
-    padding: 80px 80px 62px 0px;
+    padding: 80px 80px 62px 10px;
     border-radius: 10px;
     line-height: 24px;
 
@@ -550,6 +550,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     &__title{
       font-size: 30px;
