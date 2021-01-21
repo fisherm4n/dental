@@ -3,13 +3,13 @@
 @import 'global';
 @import 'reset';
 @import 'libs';
-@import 'media';
 
 .header {
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
   }
 
   &__button {
@@ -29,6 +29,9 @@
     &+& {
       margin-left: 50px;
     }
+  }
+  &__btn{
+    display:none;
   }
 }
 
@@ -84,6 +87,7 @@
     align-items: center;
     max-width: 230px;
     margin-bottom: 30px;
+    width: 100%;
   }
 
   &__benef-content {
@@ -407,9 +411,7 @@
     //   display: flex;
     //   width: 100%;
     // }
-    .slick-track {
-      width: 300% !important;
-    }
+  
 
     .slick-arrow {
       position: absolute;
@@ -417,9 +419,6 @@
       font-size: 0px;
     }
 
-    .slick-list {
-      margin-right: -26px;
-    }
 
     .slick-prev {
       left: 46%;
@@ -569,3 +568,7 @@
       align-self: flex-end;
     }
   }
+
+
+
+@import '_media';

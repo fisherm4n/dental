@@ -1,4 +1,8 @@
 $(function (){
+  
+  $('.team__slider').slick({
+  
+  });
   var $slider = $('.reviews__slider');
 
 if ($slider.length) {
@@ -21,19 +25,12 @@ if ($slider.length) {
   $slider.on('afterChange', function(event, slick, currentSlide) {
     updateSliderCounter(slick, currentSlide);
   });
-
-  $slider.slick();
 }
-  $$('.reviews__slider').slick({
-    arrows:true,
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 3
+  $('.reviews__slider').slick({
+    slidesToShow:3,
+    slidesToScroll:1,
     });
-  $('.team__slider').slick({
-    dots:true,
-    arrows:true,
-  });
+  
  
   $(".stars").rateYo({
     starWidth: "21px",
@@ -41,5 +38,8 @@ if ($slider.length) {
     ratedFill: "#FD6500",
     readOnly: true
     
+  });
+  $('.menu__btn').on('click',function () {
+    $('.header__inner').toggleClass('header__inner--active');
   });
 });
