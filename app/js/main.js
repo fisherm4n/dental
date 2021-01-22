@@ -29,6 +29,18 @@ if ($slider.length) {
   $('.reviews__slider').slick({
     slidesToShow:3,
     slidesToScroll:1,
+    responsive:[
+      {
+        breakpoint:700,
+        settings:{
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          adaptiveHeight: true
+        }
+      }
+    ]
     });
   
  
