@@ -1,5 +1,27 @@
 $(function (){
-  
+   $(window).on("scroll", function () {
+    if ($(this).scrollTop() >550) {
+      $(".header__inner").addClass("fixed");
+    } else{
+      $(".header__inner").removeClass("fixed");
+    }
+  });
+  $('.menu__btn, .menu__item-link').on('click',function () {
+    $('.header__inner').toggleClass('header__inner--active');
+  });
+  $(".menu__item-link, .logo, .button, .team__btn, .services__btn").on("click",function (e) {
+		//отменяем стандартную обработку нажатия по ссылке
+		e.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+  });
   $('.team__slider').slick({
   
   });
@@ -25,8 +47,7 @@ if ($slider.length) {
   $slider.on('afterChange', function(event, slick, currentSlide) {
     updateSliderCounter(slick, currentSlide);
   });
-}
-  $('.reviews__slider').slick({
+  $slider.slick({
     slidesToShow:3,
     slidesToScroll:1,
     responsive:[
@@ -34,15 +55,13 @@ if ($slider.length) {
         breakpoint:700,
         settings:{
           infinite: true,
-          speed: 300,
-          slidesToShow: 1,
-          centerMode: true,
-          adaptiveHeight: true
+          slidesToShow: 1
         }
       }
     ]
     });
-  
+}
+ 
  
   $(".stars").rateYo({
     starWidth: "21px",
@@ -51,7 +70,5 @@ if ($slider.length) {
     readOnly: true
     
   });
-  $('.menu__btn').on('click',function () {
-    $('.header__inner').toggleClass('header__inner--active');
-  });
+  
 });

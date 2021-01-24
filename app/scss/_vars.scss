@@ -23,9 +23,18 @@
     @extend %Gilroy-700;
     font-size: 18px;
     color: #ffffff;
+     display: flex;
+     max-width: 242px;
+     width: 100%;
 }
 %content-title{
   @extend %ACaslonPro-700;
   font-size: 30px;
   margin-bottom: 10px;
+}
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}x(#{$numbers});
 }
