@@ -1,4 +1,6 @@
 $(function (){
+  var $slider = $('.reviews__slider');
+  
    $(window).on("scroll", function () {
     if ($(this).scrollTop() >550) {
       $(".header__inner").addClass("fixed");
@@ -9,7 +11,7 @@ $(function (){
   $('.menu__btn, .menu__item-link').on('click',function () {
     $('.header__inner').toggleClass('header__inner--active');
   });
-  $(".menu__item-link, .logo, .button, .team__btn, .services__btn").on("click",function (e) {
+  $(".menu__item-link, .logo,.header__button, .button, .team__btn, .services__btn").on("click",function (e) {
 		//отменяем стандартную обработку нажатия по ссылке
 		e.preventDefault();
 
@@ -25,9 +27,9 @@ $(function (){
   $('.team__slider').slick({
   
   });
-  var $slider = $('.reviews__slider');
-
-if ($slider.length) {
+  
+ 
+  if ($slider.length) {
   var currentSlide;
   var slidesCount;
   var sliderCounter = document.createElement('div');
@@ -60,10 +62,9 @@ if ($slider.length) {
       }
     ]
     });
-}
+  }
  
- 
-  $(".stars").rateYo({
+   $(".stars").rateYo({
     starWidth: "21px",
     normalFill: "#d6d6d6",
     ratedFill: "#FD6500",
